@@ -34,6 +34,6 @@ public class Main {
         System.out.println("Maximum distance the car can travel on a full tank: " 
                             + drivingRange + " miles");
 
-        // Close scanner
+        // Close the Scanner to free system resources
         input.close();
     }
