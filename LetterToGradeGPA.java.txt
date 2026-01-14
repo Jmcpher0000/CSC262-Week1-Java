@@ -1,0 +1,70 @@
+import java.util.Scanner;
+
+public class LetterGradeToGPA {
+
+    public static void main(String[] args) {
+
+        // Program description
+        System.out.println("This program converts a CSC262 letter grade into a GPA value.");
+        System.out.println("Valid grades: A, A-, B+, B, B-, C+, C, C-, D+, D, D-, F\n");
+
+        Scanner input = new Scanner(System.in);
+
+        // Prompt user for letter grade
+        System.out.print("Enter a letter grade (example: A, B+, C-): ");
+        String letterGrade = input.nextLine().toUpperCase();
+
+        double gpa;
+
+        // Convert letter grade to GPA based on CSC262 grading table
+        switch (letterGrade) {
+            case "A":
+                gpa = 4.0;
+                break;
+            case "A-":
+                gpa = 3.7;
+                break;
+            case "B+":
+                gpa = 3.3;
+                break;
+            case "B":
+                gpa = 3.0;
+                break;
+            case "B-":
+                gpa = 2.7;
+                break;
+            case "C+":
+                gpa = 2.3;
+                break;
+            case "C":
+                gpa = 2.0;
+                break;
+            case "C-":
+                gpa = 1.7;
+                break;
+            case "D+":
+                gpa = 1.3;
+                break;
+            case "D":
+                gpa = 1.0;
+                break;
+            case "D-":
+                gpa = 0.7;
+                break;
+            case "F":
+                gpa = 0.0;
+                break;
+            default:
+                System.out.println("\nError: \"" + letterGrade + "\" is not a valid CSC262 letter grade.");
+                System.out.println("Please restart the program and enter a valid grade.");
+                input.close();
+                return;
+        }
+
+        // Display result
+        System.out.println("\nLetter Grade: " + letterGrade);
+        System.out.println("GPA Value: " + gpa);
+
+        input.close();
+    }
+}
